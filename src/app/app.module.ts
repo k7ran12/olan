@@ -28,6 +28,10 @@ import { ClienteEdicionComponent } from './pages/cliente/cliente-edicion/cliente
 import { MenuComponent } from './pages/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ReservaDialogComponent } from './pages/reserva/reserva-dialog/reserva-dialog.component';
+
+
 
 
 
@@ -55,6 +59,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ClienteEdicionComponent,
     MenuComponent,
     HomeComponent,
+    ReservaDialogComponent
 
 
 
@@ -62,7 +67,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     
     
   ],
-  entryComponents :[CampodeportivoDialogComponent, ProductoDialogComponent, EstadoDialogComponent,TipoclienteDialogComponent,TipodocumentoDialogComponent],
+  entryComponents :[CampodeportivoDialogComponent, ProductoDialogComponent, EstadoDialogComponent,TipoclienteDialogComponent,TipodocumentoDialogComponent, ReservaDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -71,7 +76,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },

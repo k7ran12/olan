@@ -11,6 +11,11 @@ import { MatSnackBar } from '@angular/material';
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import { map } from 'rxjs/operators';
+import { ReservaDialogComponent } from './reserva-dialog/reserva-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
+
+
+
 
 export interface Tile {
   color: string;
@@ -24,14 +29,25 @@ export interface Tile {
   templateUrl: './reserva.component.html',
   styleUrls: ['./reserva.component.css']
 })
+
 export class ReservaComponent implements OnInit {
+
+ 
+
+  
 
   //cod cri
   
 
   items = [];
 
-  onClick(hora, item, incrementador){    
+  onClick(hora, item, incrementador){   
+    
+    const dialogRef = this.dialog.open(ReservaDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
 
     //console.log(item); 
     //this.rd.setStyle(item, 'background-color', '#000080'); 
@@ -125,7 +141,7 @@ export class ReservaComponent implements OnInit {
   filteredOptionsCampoDeportivo: Observable<any[]>;
   filteredOptionsEstado: Observable<any[]>;
 
-  constructor(private clienteService:ClienteService, private campoDeportivoService:CampoDeportivoService, 
+  constructor(private dialog:MatDialog, private clienteService:ClienteService, private campoDeportivoService:CampoDeportivoService, 
     private estadoService:EstadoService, private reservaService: ReservaService, private snackbar:MatSnackBar ) { }
 
   ngOnInit() {
