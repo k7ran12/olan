@@ -1,0 +1,24 @@
+.example-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .example-container>*{
+    width: 100%;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-card {
+    display: flex;
+    flex-direction: column;
+    margin:1rem auto;
+    max-width: 1000px;
+  }
+  mat-form-field{
+    width: 100% !important;
+  }
+  button{
+    width: 100%;
+  }
