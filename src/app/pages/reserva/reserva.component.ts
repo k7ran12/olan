@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { ReservaDialogComponent } from './reserva-dialog/reserva-dialog.component';
+import { ReservaDialogSonComponent } from './reserva-dialog/reserva-dialog-son/reserva-dialog-son.component';
 import {MatDialog} from '@angular/material/dialog';
 
 
@@ -48,6 +49,7 @@ export class ReservaComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+    
 
     //console.log(item); 
     //this.rd.setStyle(item, 'background-color', '#000080'); 
@@ -61,6 +63,17 @@ export class ReservaComponent implements OnInit {
 
    
     }
+
+
+    segundoModal(){   
+    
+      const dialogRef = this.dialog.open(ReservaDialogSonComponent);
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });      
+     
+      }
 
     hacerReserva(){
       alert("reserva "+ this.items);

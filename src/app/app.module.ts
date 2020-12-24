@@ -30,6 +30,7 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ReservaDialogComponent } from './pages/reserva/reserva-dialog/reserva-dialog.component';
+import { ReservaDialogSonComponent } from './pages/reserva/reserva-dialog/reserva-dialog-son/reserva-dialog-son.component';
 
 
 
@@ -59,7 +60,8 @@ import { ReservaDialogComponent } from './pages/reserva/reserva-dialog/reserva-d
     ClienteEdicionComponent,
     MenuComponent,
     HomeComponent,
-    ReservaDialogComponent
+    ReservaDialogComponent,
+    ReservaDialogSonComponent
 
 
 
@@ -67,7 +69,7 @@ import { ReservaDialogComponent } from './pages/reserva/reserva-dialog/reserva-d
     
     
   ],
-  entryComponents :[CampodeportivoDialogComponent, ProductoDialogComponent, EstadoDialogComponent,TipoclienteDialogComponent,TipodocumentoDialogComponent, ReservaDialogComponent],
+  entryComponents :[CampodeportivoDialogComponent, ProductoDialogComponent, EstadoDialogComponent,TipoclienteDialogComponent,TipodocumentoDialogComponent, ReservaDialogComponent, ReservaDialogSonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
